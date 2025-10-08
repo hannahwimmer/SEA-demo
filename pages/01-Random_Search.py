@@ -64,7 +64,7 @@ st.header("Results")
 
 col1, col2 = st.columns(spec=[0.3,0.7])
 with col1:
-    """set up a control panel"""
+    #set up a control panel
     iterations = st.slider("Iterations", 1, 50, step=1)
     lower_bound = st.number_input("Lower Bound", -50.0, 0.0, -5.0)
     upper_bound = st.number_input("Upper Bound", 0.0, 50.0, 5.0)
@@ -87,7 +87,7 @@ with col1:
     fitness_values = [fitness_function(x) for x in candidate_values]
 
 with col2:
-    """plotting everything"""
+    #plot everything
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.plot(candidate_values, fitness_values, label="Objective Function", color='black')
     sc = ax.scatter(candidate_history, fitness_history, 
