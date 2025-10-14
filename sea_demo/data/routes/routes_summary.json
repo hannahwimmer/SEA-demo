@@ -1,0 +1,227 @@
+{
+  "Graz_to_Vienna": {
+    "distance_km": 195.1,
+    "duration_h": 2.25,
+    "file": "sea_demo/data/routes/route_Graz_Vienna.json"
+  },
+  "Linz_to_Vienna": {
+    "distance_km": 178.4,
+    "duration_h": 1.94,
+    "file": "sea_demo/data/routes/route_Linz_Vienna.json"
+  },
+  "Linz_to_Graz": {
+    "distance_km": 217.9,
+    "duration_h": 2.4,
+    "file": "sea_demo/data/routes/route_Linz_Graz.json"
+  },
+  "Salzburg_to_Vienna": {
+    "distance_km": 296.2,
+    "duration_h": 2.99,
+    "file": "sea_demo/data/routes/route_Salzburg_Vienna.json"
+  },
+  "Salzburg_to_Graz": {
+    "distance_km": 281.4,
+    "duration_h": 2.94,
+    "file": "sea_demo/data/routes/route_Salzburg_Graz.json"
+  },
+  "Salzburg_to_Linz": {
+    "distance_km": 134.5,
+    "duration_h": 1.43,
+    "file": "sea_demo/data/routes/route_Salzburg_Linz.json"
+  },
+  "Innsbruck_to_Vienna": {
+    "distance_km": 472.1,
+    "duration_h": 4.79,
+    "file": "sea_demo/data/routes/route_Innsbruck_Vienna.json"
+  },
+  "Innsbruck_to_Graz": {
+    "distance_km": 457.3,
+    "duration_h": 4.74,
+    "file": "sea_demo/data/routes/route_Innsbruck_Graz.json"
+  },
+  "Innsbruck_to_Linz": {
+    "distance_km": 310.4,
+    "duration_h": 3.23,
+    "file": "sea_demo/data/routes/route_Innsbruck_Linz.json"
+  },
+  "Innsbruck_to_Salzburg": {
+    "distance_km": 181.3,
+    "duration_h": 2.03,
+    "file": "sea_demo/data/routes/route_Innsbruck_Salzburg.json"
+  },
+  "Klagenfurt_to_Vienna": {
+    "distance_km": 318.7,
+    "duration_h": 3.41,
+    "file": "sea_demo/data/routes/route_Klagenfurt_Vienna.json"
+  },
+  "Klagenfurt_to_Graz": {
+    "distance_km": 133.8,
+    "duration_h": 1.6,
+    "file": "sea_demo/data/routes/route_Klagenfurt_Graz.json"
+  },
+  "Klagenfurt_to_Linz": {
+    "distance_km": 247.9,
+    "duration_h": 3.23,
+    "file": "sea_demo/data/routes/route_Klagenfurt_Linz.json"
+  },
+  "Klagenfurt_to_Salzburg": {
+    "distance_km": 223.0,
+    "duration_h": 2.35,
+    "file": "sea_demo/data/routes/route_Klagenfurt_Salzburg.json"
+  },
+  "Klagenfurt_to_Innsbruck": {
+    "distance_km": 390.1,
+    "duration_h": 4.04,
+    "file": "sea_demo/data/routes/route_Klagenfurt_Innsbruck.json"
+  },
+  "St. Pölten_to_Vienna": {
+    "distance_km": 61.9,
+    "duration_h": 0.92,
+    "file": "sea_demo/data/routes/route_St._Pölten_Vienna.json"
+  },
+  "St. Pölten_to_Graz": {
+    "distance_km": 231.0,
+    "duration_h": 2.51,
+    "file": "sea_demo/data/routes/route_St._Pölten_Graz.json"
+  },
+  "St. Pölten_to_Linz": {
+    "distance_km": 122.5,
+    "duration_h": 1.32,
+    "file": "sea_demo/data/routes/route_St._Pölten_Linz.json"
+  },
+  "St. Pölten_to_Salzburg": {
+    "distance_km": 240.7,
+    "duration_h": 2.34,
+    "file": "sea_demo/data/routes/route_St._Pölten_Salzburg.json"
+  },
+  "St. Pölten_to_Innsbruck": {
+    "distance_km": 418.7,
+    "duration_h": 4.17,
+    "file": "sea_demo/data/routes/route_St._Pölten_Innsbruck.json"
+  },
+  "St. Pölten_to_Klagenfurt": {
+    "distance_km": 355.4,
+    "duration_h": 3.67,
+    "file": "sea_demo/data/routes/route_St._Pölten_Klagenfurt.json"
+  },
+  "Eisenstadt_to_Vienna": {
+    "distance_km": 56.5,
+    "duration_h": 0.96,
+    "file": "sea_demo/data/routes/route_Eisenstadt_Vienna.json"
+  },
+  "Eisenstadt_to_Graz": {
+    "distance_km": 172.4,
+    "duration_h": 1.84,
+    "file": "sea_demo/data/routes/route_Eisenstadt_Graz.json"
+  },
+  "Eisenstadt_to_Linz": {
+    "distance_km": 217.8,
+    "duration_h": 2.41,
+    "file": "sea_demo/data/routes/route_Eisenstadt_Linz.json"
+  },
+  "Eisenstadt_to_Salzburg": {
+    "distance_km": 336.0,
+    "duration_h": 3.43,
+    "file": "sea_demo/data/routes/route_Eisenstadt_Salzburg.json"
+  },
+  "Eisenstadt_to_Innsbruck": {
+    "distance_km": 513.9,
+    "duration_h": 5.26,
+    "file": "sea_demo/data/routes/route_Eisenstadt_Innsbruck.json"
+  },
+  "Eisenstadt_to_Klagenfurt": {
+    "distance_km": 296.8,
+    "duration_h": 3.0,
+    "file": "sea_demo/data/routes/route_Eisenstadt_Klagenfurt.json"
+  },
+  "Eisenstadt_to_St. Pölten": {
+    "distance_km": 101.6,
+    "duration_h": 1.4,
+    "file": "sea_demo/data/routes/route_Eisenstadt_St._Pölten.json"
+  },
+  "Bregenz_to_Vienna": {
+    "distance_km": 591.7,
+    "duration_h": 5.77,
+    "file": "sea_demo/data/routes/route_Bregenz_Vienna.json"
+  },
+  "Bregenz_to_Graz": {
+    "distance_km": 593.1,
+    "duration_h": 5.88,
+    "file": "sea_demo/data/routes/route_Bregenz_Graz.json"
+  },
+  "Bregenz_to_Linz": {
+    "distance_km": 430.1,
+    "duration_h": 4.22,
+    "file": "sea_demo/data/routes/route_Bregenz_Linz.json"
+  },
+  "Bregenz_to_Salzburg": {
+    "distance_km": 348.3,
+    "duration_h": 3.18,
+    "file": "sea_demo/data/routes/route_Bregenz_Salzburg.json"
+  },
+  "Bregenz_to_Innsbruck": {
+    "distance_km": 191.5,
+    "duration_h": 2.44,
+    "file": "sea_demo/data/routes/route_Bregenz_Innsbruck.json"
+  },
+  "Bregenz_to_Klagenfurt": {
+    "distance_km": 555.3,
+    "duration_h": 5.23,
+    "file": "sea_demo/data/routes/route_Bregenz_Klagenfurt.json"
+  },
+  "Bregenz_to_St. Pölten": {
+    "distance_km": 541.6,
+    "duration_h": 5.19,
+    "file": "sea_demo/data/routes/route_Bregenz_St._Pölten.json"
+  },
+  "Bregenz_to_Eisenstadt": {
+    "distance_km": 644.1,
+    "duration_h": 6.26,
+    "file": "sea_demo/data/routes/route_Bregenz_Eisenstadt.json"
+  },
+  "Lienz_to_Vienna": {
+    "distance_km": 465.1,
+    "duration_h": 5.29,
+    "file": "sea_demo/data/routes/route_Lienz_Vienna.json"
+  },
+  "Lienz_to_Graz": {
+    "distance_km": 280.2,
+    "duration_h": 3.48,
+    "file": "sea_demo/data/routes/route_Lienz_Graz.json"
+  },
+  "Lienz_to_Linz": {
+    "distance_km": 344.9,
+    "duration_h": 4.0,
+    "file": "sea_demo/data/routes/route_Lienz_Linz.json"
+  },
+  "Lienz_to_Salzburg": {
+    "distance_km": 215.8,
+    "duration_h": 2.79,
+    "file": "sea_demo/data/routes/route_Lienz_Salzburg.json"
+  },
+  "Lienz_to_Innsbruck": {
+    "distance_km": 179.8,
+    "duration_h": 2.98,
+    "file": "sea_demo/data/routes/route_Lienz_Innsbruck.json"
+  },
+  "Lienz_to_Klagenfurt": {
+    "distance_km": 146.1,
+    "duration_h": 2.11,
+    "file": "sea_demo/data/routes/route_Lienz_Klagenfurt.json"
+  },
+  "Lienz_to_St. Pölten": {
+    "distance_km": 456.5,
+    "duration_h": 4.97,
+    "file": "sea_demo/data/routes/route_Lienz_St._Pölten.json"
+  },
+  "Lienz_to_Eisenstadt": {
+    "distance_km": 443.6,
+    "duration_h": 4.89,
+    "file": "sea_demo/data/routes/route_Lienz_Eisenstadt.json"
+  },
+  "Lienz_to_Bregenz": {
+    "distance_km": 360.0,
+    "duration_h": 5.12,
+    "file": "sea_demo/data/routes/route_Lienz_Bregenz.json"
+  }
+}
