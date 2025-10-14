@@ -1,11 +1,33 @@
-# Python-generated files
+# python-generated files
 __pycache__/
-*.py[oc]
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+
 build/
 dist/
+*.egg-info/
+*.egg
 wheels/
-*.egg-info
+
+# virtual environments
+.venv/
+env/
+venv/
+ENV/
+.uv/
 uv.lock
 
-# Virtual environments
-.venv
+# ide / editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# dynaconf
+.secrets.*
+secrets.toml
+settings.local.*
+.env
