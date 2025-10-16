@@ -1,43 +1,59 @@
 import numpy as np
 
 
-def fitness_function(roast: int, blend: int, grind: int, brew_time: int) -> float:
+def coffee_fitness_4d(roast: int, blend: int, grind: int, brew_time: float) -> float:
     """
-    a fictional coffee quality function with multiple local optima
-    (sorry from my side - the function below's been generated with ChatGPT)
-    ------------------------------------------
-    inputs: basic properties in range 0..100, each
-    output: quality score in range 0..100
+    Fictional 4D coffee quality fitness function
+    (ChatGPT-generated - sorry about that.. was just looking for a quick 4D dummy
+    function...)
+    ---------------------------------------------
+    Parameters:
+        roast (int):  [0, 20]
+        blend (int):  [0, 50]
+        grind (int):  [0, 10]
+        brew_time (float): [0.0, 5.0] (minutes)
+
+    Returns:
+        float: quality score in [0, 100]
+
+    The function is intentionally multimodal, with many local optima and
+    a clear global optimum region around ideal values.
     """
 
-    # normalize the inputs
-    R = roast / 100.0
-    B = blend / 100.0
-    G = grind / 100.0
-    T = brew_time / 100.0
+    # --- normalize inputs to [0, 1] ---
+    R = np.clip(roast / 20.0, 0, 1)
+    B = np.clip(blend / 100.0, 0, 1)
+    G = np.clip(grind / 10.0, 0, 1)
+    T = np.clip(brew_time / 5.0, 0, 1)
 
-    # generate some base attributes
-    acidity    = 1 - R
-    bitterness = 0.6*R + 0.4*T
-    body       = 0.5*B + 0.3*G + 0.2*T
-    aroma      = 0.7*R + 0.2*B + 0.1*T
-    sweetness  = 1 - 0.5*B - 0.5*T
-
-    # introduce some nonlinearities / local optima
-    bumps = (
-        0.1*np.sin(5*np.pi*R)*np.sin(5*np.pi*G) + 
-        0.1*np.cos(4*np.pi*B)*np.cos(3*np.pi*T)
+    # --- sinusoidal landscape for local optima ---
+    base_pattern = (
+        np.sin(6 * np.pi * R) * np.cos(4 * np.pi * B) +
+        np.sin(5 * np.pi * G) * np.cos(3 * np.pi * T) +
+        0.5 * np.sin(2 * np.pi * (R + B + G + T))
     )
 
-    # combine to an overall quality score
-    quality_score = (
-        0.3*aroma + 0.2*sweetness + 0.2*body + 0.2*acidity + 0.1*bitterness
+    # --- smooth "global optimum" Gaussian region ---
+    # Ideal combination: medium roast, balanced blend, mid grind, moderate brew
+    ideal = np.exp(
+        -((R - 0.6)**2 / 0.015)
+        -((B - 0.5)**2 / 0.02)
+        -((G - 0.5)**2 / 0.02)
+        -((T - 0.55)**2 / 0.015)
     )
-    quality_score = quality_score * 100 + bumps*50
 
-    # penalize excessive bitterness (because why not...)
-    if bitterness*100 > 60:
-        quality_score -= 25*((bitterness*100 - 60)/60)**2
+    # --- cross-interaction term to couple dimensions (non-separable landscape) ---
+    interactions = 0.2 * np.sin(3 * np.pi * R * B) + 0.15 * np.cos(4 * np.pi * G * T)
 
-    # return a score between 0 and 100
-    return max(0, min(100, quality_score))
+    # --- combine components ---
+    score = 0.6 * ideal + 0.3 * base_pattern + interactions
+
+    # --- add a small asymmetry (e.g., bitterness penalty) ---
+    bitterness = 0.6 * R + 0.4 * T
+    if bitterness > 0.7:
+        score -= 0.2 * (bitterness - 0.7) ** 2
+
+    # --- scale and clip to [0, 100] ---
+    quality = np.clip(50 + 50 * score, 0, 100)
+
+    return float(quality)

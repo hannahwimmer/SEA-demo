@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from sea_demo.codes.assignment02_fitness import fitness_function
+from sea_demo.codes.assignment02_fitness import coffee_fitness_4d as fitness_function
 
 
 def plot_fitness_grid(fitness_function, fixed_dims, fixed_values, grid_points=100):
@@ -19,10 +19,12 @@ def plot_fitness_grid(fitness_function, fixed_dims, fixed_values, grid_points=10
     # all dimension names
     all_dims = ['roast', 'blend', 'grind', 'brew_time']
     variable_dims = [d for d in all_dims if d not in fixed_dims]
+    limits = [20, 100, 10, 5.0]
+    variable_lims = [l for (l, d) in zip(limits, all_dims) if d not in fixed_dims]
 
     # create grid
-    X_vals = np.linspace(0, 100, grid_points)
-    Y_vals = np.linspace(0, 100, grid_points)
+    X_vals = np.linspace(0, variable_lims[0], grid_points)
+    Y_vals = np.linspace(0, variable_lims[1], grid_points)
     X, Y = np.meshgrid(X_vals, Y_vals)
     Z = np.zeros_like(X)
 
@@ -47,6 +49,5 @@ def plot_fitness_grid(fitness_function, fixed_dims, fixed_values, grid_points=10
 # Example usage:
 if __name__ == "__main__":
     plot_fitness_grid(
-        fitness_function, fixed_dims=['roast','blend'], fixed_values=[50,50]
+        fitness_function, fixed_dims=['grind','brew_time'], fixed_values=[5,4.0]
     )
-
