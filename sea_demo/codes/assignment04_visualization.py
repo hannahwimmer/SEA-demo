@@ -59,7 +59,7 @@ def plot_route(route: list[str]):
 
     _, ax = plt.subplots(figsize=(8, 6))
     austria.plot(ax=ax, color="beige", edgecolor="gray")
-    cmap = cm.get_cmap("viridis", len(route)-1)
+    cmap = plt.get_cmap("viridis", len(route)-1)
 
     # plot route lines
     for i in range(len(route)-1):
