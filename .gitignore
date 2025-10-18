@@ -31,3 +31,6 @@ uv.lock
 secrets.toml
 settings.local.*
 .env
+
+# data 
+data
