@@ -44,7 +44,6 @@ def get_route(city_from: str, city_to: str, coordinates: dict):
     )
 
 
-    # ✅ Check if route file already exists
     if os.path.exists(filename) or os.path.exists(filename_viceversa):
         print(f"Route file already exists: {filename}")
         with open(filename, "r", encoding="utf-8") as f:
