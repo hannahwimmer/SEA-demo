@@ -44,14 +44,14 @@ def get_route(city_from: str, city_to: str, coordinates: dict):
     )
 
 
-    # ✅ Check if route file already exists
+    # check if route file already exists
     if os.path.exists(filename) or os.path.exists(filename_viceversa):
         print(f"Route file already exists: {filename}")
         with open(filename, "r", encoding="utf-8") as f:
             route = json.load(f)
         summary = route["features"][0]["properties"]["summary"]
-        distance_km = summary["distance"] / 1000
-        duration_h = summary["duration"] / 3600
+        distance_km = summary["distance"] / 1000    # m to km
+        duration_h = summary["duration"] / 3600     # s to h
 
     else:
         print(f"\nFetching route from {city_from} to {city_to} ...")
@@ -78,13 +78,13 @@ def get_route(city_from: str, city_to: str, coordinates: dict):
             print(f"Error fetching route: {ex}")
             return None
         
-        route_details = {
-                "distance_km": round(distance_km, 1),
-                "duration_h": round(duration_h, 2),
-                "file": filename
-            }
+    route_details = {
+            "distance_km": round(distance_km, 1),
+            "duration_h": round(duration_h, 2),
+            "file": filename
+        }
 
-        return route_details
+    return route_details
 
 
 def get_data(cities: list):
