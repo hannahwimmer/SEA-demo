@@ -79,5 +79,6 @@ def plot_route(route: list[str]):
 
 
 if __name__ == "__main__":
-    example_route = ["Graz", "Vienna", "Linz", "Salzburg", "Graz"]
+    example_route = ["Graz", "Klagenfurt", "Villach", "Spittal_an_der_Drau", "Salzburg",
+        "Graz"]
     plot_route(example_route)
