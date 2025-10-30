@@ -4,7 +4,16 @@ import json
 import os 
 import time
 
-# needs an openroute service API key (free on: https://account.heigit.org/signup)
+"""Data retrieval script for assignment 04.
+
+important: this script needs an openroute service API key (free on: 
+https://account.heigit.org/signup, if you're interested in trying it out yourself)
+
+Run from the project root:
+    python -m sea_demo.codes.assignment04_data_retrieval
+
+"""
+
 API_KEY = settings.API_KEY
 client = openrouteservice.Client(key=API_KEY)
 
@@ -50,8 +59,8 @@ def get_route(city_from: str, city_to: str, coordinates: dict):
         with open(filename, "r", encoding="utf-8") as f:
             route = json.load(f)
         summary = route["features"][0]["properties"]["summary"]
-        distance_km = summary["distance"] / 1000    # m to km
-        duration_h = summary["duration"] / 3600     # s to h
+        distance_km = summary["distance"] / 1000    # converts m to km
+        duration_h = summary["duration"] / 3600     # converts s to h
 
     else:
         print(f"\nFetching route from {city_from} to {city_to} ...")
@@ -59,7 +68,7 @@ def get_route(city_from: str, city_to: str, coordinates: dict):
             route = client.directions(
                 coordinates=[coordinates[city_from], coordinates[city_to]],
                 profile='driving-car',
-                format='geojson'  # returns full geometry in GeoJSON
+                format='geojson'  # return full geometry in GeoJSON
             )
 
             # save to json for later use

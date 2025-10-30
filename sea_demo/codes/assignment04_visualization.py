@@ -1,3 +1,13 @@
+"""
+Visualization script for assignment 04.
+
+Run from the project root:
+    python -m sea_demo.codes.assignment04_visualization
+
+Do NOT run directly as:
+    python sea_demo/codes/assignment04_visualization.py
+"""
+
 import json
 import matplotlib.pyplot as plt
 import geopandas as gpd
