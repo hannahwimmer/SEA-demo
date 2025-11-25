@@ -8,8 +8,12 @@ dependencies = [
     "dynaconf>=3.2.12",
     "geopandas>=1.1.1",
     "matplotlib>=3.10.6",
+    "numpy==2.0",
     "openrouteservice>=2.3.3",
     "pandas>=2.3.3",
+    "pyqt6>=6.10.0",
+    "scikit-image>=0.25.2",
+    "scikit-learn>=1.7.2",
     "shapely>=2.1.2",
     "streamlit>=1.50.0",
 ]
